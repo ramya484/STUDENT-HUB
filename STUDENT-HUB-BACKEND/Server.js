@@ -2,7 +2,7 @@ const exp=require('express')
 const app=exp()
 
 const studentApp=require('./APIs/studentApi')
-
+const attendanceApp=require('./APIs/attendanceApi')
 
 const cors=require('cors')
 app.use(cors({
@@ -12,6 +12,7 @@ app.use(cors({
 require('dotenv').config()
 
 app.use('/student-api',studentApp)
+app.use('/attendance-api',attendanceApp)
 app.use('*',(req,res,next)=>{
     console.log(req)
     res.send({message:"Invalid path"})
@@ -30,8 +31,9 @@ mClient.connect()
 .then((connect_obj)=>{
     const backenddb=connect_obj.db('attendance')
     const studentCollection=backenddb.collection('student')
+    const attendance_excelCollection=backenddb.collection('attendance_excel')
     app.set('studentCollection',studentCollection)
-
+    app.set('attendance_excelCollection',attendance_excelCollection)
 
     console.log("DB is Connected")
     app.listen(process.env.PORT,()=>console.log('http server started at port 4000'))
