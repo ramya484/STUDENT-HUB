@@ -11,11 +11,7 @@ import Routingerror from "./components/Routingerror";
 import Curriculu_home from "./components/curriculum/Curriculum_home/Curriculum_home";
 import Syllabus from "./components/curriculum/syllabus/Syllabus";
 import Textbooks from "./components/curriculum/Textbooks/Textbooks";
-import Attendance_track from "./components/attendance/Attendance_home/Attendance_track";
-import Myattendance from "./components/attendance/Myattendance/Myattendance";
-import Notes_track from "./components/notes/Notes_home/Notes_track";
-import Mynotes from "./components/notes/Mynotes/Mynotes";
-import User_profile from "./components/user_profile/User_profile";
+import Attendance_track from "./components/attendance/Attendance_track";
 import Dashboard from "./components/dashboard/Dashboard";
 
 
@@ -57,22 +53,6 @@ function App() {
         {
           path:"attendance",
           element:<Attendance_track />,
-        },
-        {
-         path:"myattendance",
-         element:<Myattendance />,
-        },
-        {
-          path:"notes",
-          element:<Notes_track />,
-        },
-        {
-         path:"mynote",
-         element:<Mynotes />,
-        },
-        {
-          path:"user+profile",
-          element:<User_profile />,
         },
         {
           path:"dashboard",

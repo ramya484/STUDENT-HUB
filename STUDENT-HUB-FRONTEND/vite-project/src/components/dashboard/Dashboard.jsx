@@ -19,38 +19,27 @@ function handleCurriculum()
   
 }
 
-function handleNotes()
-{
-  
-      navigate('/notes')
- 
-}
+
 
   return (
     <div>
         <h2 className='text-danger text-center p-5'>Welcome to {currentUser.email}</h2>
         <div className="button-card-row row">
-         <div className="col-md-4 mb-4"> 
+         <div className="col-md-6 mb-4"> 
           <div className="button-card card-light-pink shadow-lg">
             <h4>Attendance tracker</h4>
             <p>Effortlessly track your daily attendance and maintain a consistent record.</p>
             <div className="btn btn-custom" onClick={handleAttendance}>Track my attendance</div>
           </div>
         </div>
-      <div className="col-md-4 mb-4">
+      <div className="col-md-6 mb-4">
          <div className="button-card card-white shadow-lg">
           <h4>Curriculum Progress</h4>
           <p>Easily track your subjects, assignments, and academic goals in one place.</p>
           <div className="btn btn-custom" onClick={handleCurriculum}>Curriculum tracker</div>
         </div>
       </div>
-      <div className="col-md-4 mb-4">
-        <div className="button-card card-danger shadow-lg">
-        <h4>Notes & Reminder</h4>
-        <p>Organize your tasks and stay on top of deadlines with timely reminders.</p>
-        <div className="btn btn-custom" onClick={handleNotes}>Daily notes & reminders</div>
-        </div>
-      </div>
+      
   
   </div>
 </div>
