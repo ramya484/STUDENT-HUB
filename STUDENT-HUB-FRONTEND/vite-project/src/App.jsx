@@ -13,6 +13,14 @@ import Syllabus from "./components/curriculum/syllabus/Syllabus";
 import Textbooks from "./components/curriculum/Textbooks/Textbooks";
 import Attendance_track from "./components/attendance/Attendance_track";
 import Dashboard from "./components/dashboard/Dashboard";
+import SemI from "./components/curriculum/syllabus/semI";
+import SemII from "./components/curriculum/syllabus/semII";
+import SemIII from "./components/curriculum/syllabus/semIII";
+import SemIV from "./components/curriculum/syllabus/semIV";
+import SemV from "./components/curriculum/syllabus/semV";
+import SemVI from "./components/curriculum/syllabus/semVI";
+import SemVII from "./components/curriculum/syllabus/semVII";
+import SemVIII from "./components/curriculum/syllabus/semVIII";
 
 
 function App() {
@@ -57,6 +65,38 @@ function App() {
         {
           path:"dashboard",
           element:<Dashboard />,
+        },
+        {
+          path:"semesterI",
+          element:<SemI />,
+        },
+        {
+          path:"semesterII",
+          element:<SemII />,
+        },
+        {
+          path:"semesterIII",
+          element:<SemIII />,
+        },
+        {
+          path:"semesterIV",
+          element:<SemIV />,
+        },
+        {
+          path:"semesterV",
+          element:<SemV />,
+        },
+        {
+          path:"semesterVI",
+          element:<SemVI />,
+        },
+        {
+          path:"semesterVII",
+          element:<SemVII />,
+        },
+        {
+          path:"semesterVIII",
+          element:<SemVIII />,
         },
       ],
     },
