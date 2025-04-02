@@ -27,6 +27,10 @@ studentApp.get(
   })
 );
 
+studentApp.get("/", (req, res) => {
+  res.send({ message: "API is connected successfully!" });
+});
+
 //route to send one user by id(protected route)
 studentApp.get(
   "/student/:studentID",
