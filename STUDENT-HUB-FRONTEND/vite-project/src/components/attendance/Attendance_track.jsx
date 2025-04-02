@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { userLoginContext } from '../../context/usercontext';
-import './Attendance_track.css'; // Import the CSS file if you have custom styles
+import './Attendance_track.css'; 
 
 function Attendance_track() {
     const [formData, setFormData] = useState({ date: '', month: '' });
     const [dailyAttendance, setDailyAttendance] = useState(null);
     const [error, setError] = useState(null);
-    const { currentUser } = useContext(userLoginContext); // Ensure currentUser is not null
+    const { currentUser } = useContext(userLoginContext); 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -21,7 +21,7 @@ function Attendance_track() {
         }
 
         try {
-            const response = await fetch(`http://localhost:4000/attendance-api/attendance/${currentUser.studentID}/${date}`);
+            const response = await fetch(`http://student-hub-w2uz.vercel.app/attendance-api/attendance/${currentUser.studentID}/${date}`);
             const data = await response.json();
             if (response.ok) {
                 setDailyAttendance(data.data);
@@ -65,7 +65,7 @@ function Attendance_track() {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* Display attendance without roll number */}
+                            {}
                             {dailyAttendance.subjects && Object.entries(dailyAttendance.subjects).map(([subject, attendance]) => (
                                 <tr key={subject}>
                                     <td>{subject}</td>

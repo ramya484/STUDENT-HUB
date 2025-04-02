@@ -33,7 +33,7 @@ function StudentRegistration() {
   async function onUserRegister(newUser) {
     
     try {
-      let res = await fetch("http://localhost:4000/student-api/student", {
+      let res = await fetch("http://student-hub-w2uz.vercel.app/student-api/student", {
         method: "POST",
         headers: { "Content-type": "application/json" ,},
         body: JSON.stringify(newUser),
