@@ -21,7 +21,7 @@ function Attendance_track() {
         }
 
         try {
-            const response = await fetch(`http://student-hub-w2uz.vercel.app/attendance-api/attendance/${currentUser.studentID}/${date}`);
+            const response = await fetch(`https://student-hub-v3qo.vercel.app/attendance-api/attendance/${currentUser.studentID}/${date}`);
             const data = await response.json();
             if (response.ok) {
                 setDailyAttendance(data.data);
